@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import MainPage from 'src/core/main-page';
 import TatetiPage from 'src/core/tateti/page';
+import Game2048 from 'src/core/game-2048';
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
   {
     path: '/play/tateti',
     element: <TatetiPage />,
+  },
+  {
+    path: '/play/2048',
+    element: <Game2048 />,
   },
 ]);
 
