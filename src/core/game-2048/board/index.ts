@@ -1,35 +1,32 @@
 import styled from 'styled-components';
 import Board from './board.component';
-import { colors } from './fixtures';
+import { columnLength, rowLength } from './fixtures';
 
 export default styled(Board)`
   width: 100%;
   aspect-ratio: 1/1;
   background-color: #a39183;
   border-radius: var(--border-radius-size);
+  position: relative;
 
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  gap: 0.5rem;
-  padding: 0.5rem;
+  .tiles-back {
+    display: grid;
+    grid-template-columns: repeat(${rowLength}, 1fr);
+    grid-template-rows: repeat(${columnLength}, 1fr);
+    gap: 0.5rem;
+    padding: 0.5rem;
+    height: 100%;
 
-  .tile {
-    background-color: #beae9f;
-    border-radius: var(--border-radius-size);
-    color: #fff;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
+    .tile-back {
+      border-radius: var(--border-radius-size);
+      background-color: #beae9f;
+    }
   }
-  ${colors.map(
-  (color, i) => `
-      .tile.tile-exp-${i} {
-        background-color: ${color};
-        ${[0, 1].includes(i) ? 'color: #766f61' : ''}
-      }
-    `,
-)}
+
+  .tiles-container {
+    padding: 0.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 `;

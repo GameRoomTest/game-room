@@ -13,7 +13,7 @@ export default styled(Game2048)`
 
   .body-container {
     padding: 2rem;
-    width: 90%;
+    width: 100%;
     max-width: 500px;
     margin: auto;
 

@@ -1,4 +1,4 @@
-import { BoardMatrix } from './types';
+import { getValuePositions } from './utils';
 
 export const colors = [
   '#f0e9de',
@@ -14,9 +14,9 @@ export const colors = [
   '#e8be4e',
 ];
 
-export const initialBoardMatrix: BoardMatrix = [
-  [undefined, undefined, undefined, undefined],
-  [undefined, undefined, undefined, undefined],
-  [undefined, undefined, undefined, undefined],
-  [undefined, undefined, undefined, undefined],
-];
+export const columnLength = 4;
+export const rowLength = 4;
+export const initialTileValue = 2;
+export const TILE_POSITION_SEPARATOR = '-' as const;
+
+export const tilesPositions: string[] = getValuePositions();
