@@ -1,18 +1,12 @@
 import styled from 'styled-components';
-import Game from './game.component';
+import Score from './score.component';
 
-export default styled(Game)`
-  height: 100%;
+export default styled(Score)`
   display: flex;
-  flex-direction: column;
+  gap: 1rem;
 
-  .header {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .game-title-tile {
-    background-color: #e6c864;
+  .tile {
+    background-color: #a39183;
     color: #fff;
     font-weight: 700;
     aspect-ratio: 1/1;
@@ -24,11 +18,14 @@ export default styled(Game)`
     border-radius: 0.25rem;
   }
 
-  .game-body {
-    flex-grow: 1;
-
+  .score-box {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+
+    .title {
+      font-size: 1rem;
+      font-weight: 500;
+    }
   }
 `;

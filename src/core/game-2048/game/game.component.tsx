@@ -1,13 +1,20 @@
 import { FunctionComponent } from 'react';
+import Score from 'src/core/game-2048/score';
+import Board from 'src/core/game-2048/board';
 
 const Game: FunctionComponent<Props> = ({ className, onClickMenu }) => {
   return (
-    <div className={className} id="asdasdsa">
-      <header className="header" onClick={onClickMenu}>
-        <div className="title-tile">2048</div>
+    <div className={className}>
+      <header className="header">
+        <div className="game-title-tile" onClick={onClickMenu}>
+          2048
+        </div>
+        <Score />
       </header>
 
-      <div className="game-body"></div>
+      <div className="game-body">
+        <Board />
+      </div>
     </div>
   );
 };
